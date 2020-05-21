@@ -4,9 +4,12 @@
 Log Processor is available as a docker image. To process the log files, invoke the docker container as follows.
 
 ### Usage
-##### Sample Input
+
+
+#### Sample Input
 
 ```sh
+
 2015-10-28T12:24:33,903 TRACE [OperImpl] entry with (addClient:97900)
 2015-10-28T12:24:34,002 TRACE [OperImpl] exit with (addClient:97900)
 2015-10-28T12:24:33,903 TRACE [OperImpl] entry with (addClient:97901)
@@ -20,11 +23,18 @@ Log Processor is available as a docker image. To process the log files, invoke t
 
 ```
 
-```sh
-docker run -v ~/path/to/test.log:/test.log  rupinrnath/log-processor test.log
-```
+#### Command
 
 ```sh
+
+docker run -v ~/path/to/test.log:/test.log  rupinrnath/log-processor test.log
+
+```
+
+#### Console Output
+
+```sh
+
 clearClient has been called 1 times
 Max Execution Time is 2.099
 
@@ -33,5 +43,6 @@ Max Execution Time is 7201.099
 
 funClient has been called 1 times
 Max Execution Time is 2.099
+
 ```
 
