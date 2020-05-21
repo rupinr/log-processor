@@ -12,7 +12,7 @@ public class MainClass {
 
     public static void main(String[] args) throws IOException {
         List<LogEntry> logEntryList = new ArrayList<>();
-        FileReader.readFile("test.log",logEntryList);
+        FileReader.readFile(args[0],logEntryList);
         AggregationProcessor.aggregate(logEntryList);
 
         AggregationProcessor.serviceCallCounter.keySet().forEach(
